@@ -16,6 +16,8 @@ import { RedcontactosCardsComponent } from './components/vista-dos/redcontactos-
 import { CrecerNegocioComponent } from './components/vista-dos/crecer-negocio/crecer-negocio.component';
 import { AtencionClienteComponent } from './components/vista-dos/atencion-cliente/atencion-cliente.component';
 import { OtrosServiciosComponent } from './components/otros-servicios/otros-servicios.component';
+import { ContenedorServiciosComponent } from './components/vista-dos/contenedor-servicios/contenedor-servicios.component';
+import { ContenedorPrestamosComponent } from './components/vista-dos/contenedor-prestamos/contenedor-prestamos.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { OtrosServiciosComponent } from './components/otros-servicios/otros-serv
     RedcontactosCardsComponent,
     CrecerNegocioComponent,
     AtencionClienteComponent,
-    OtrosServiciosComponent
+    OtrosServiciosComponent,
+    ContenedorServiciosComponent,
+    ContenedorPrestamosComponent
   ],
   imports: [
     BrowserModule,
