@@ -1,147 +1,162 @@
 <section class="container">
 
-    <h1>PRESTAMYPE</h1>
-    
-    <h1>¡YA FALTA POCO PARA RECIBIR TU PRÉSTAMO!</h1>
-    
-    <div>
-    
+  <h1>PRESTAMYPE</h1>
+  
+  <h1>¡YA FALTA POCO PARA RECIBIR TU PRÉSTAMO!</h1>
+  
+  <div>
+  
+   
+  
+  </div>
+  
+  ​
+  
+  ​
+  
+   <div class="row">
+  
+     <div class="col-sm-6">
+  
+      <div class="card">
+  
+       <div class="card-body">
+  
+         <p>Cuota</p>
+  
+         <h1>S/. 377.78</h1>
+  
+         <p>Mensuales</p>
+  
+       </div>
+  
+      </div>
+  
+     </div>
+  
+  ​
+  
+     <div class="col-sm-6">
+  
+      <div class="card">
+  
+       <div class="card-body">
+  
+         <div class="row">
+  
+           <div class="col">
+  
+            <p>Préstamo</p>
+  
+           </div>
+  
+           <div class="col">
+  
+            <p>Intereses</p>
+  
+           </div>
+  
+           <div class="col">
+  
+            <p>Total a Pagar</p>
+  
+           </div>
+  
+         </div>
+  
+         <div class="row">
+  
+           <div class="col">
+  
+            10000
+  
+           </div>
+  
+           <div class="col">
+  
+            <span>+</span>
+  
+            3600
+  
+           </div>
+  
+           <div class="col">
+  
+            <span>=</span>
+  
+            13600
+  
+           </div>
+  
+         </div>
+  
+       </div>
+  
+      </div>
+  
+     </div>
+  
     </div>
-    
-    
-    
-    
-    
-      <div class="row">
-    
-          <div class="col-sm-6">
-    
-            <div class="card">
-    
-              <div class="card-body">
-    
-                  <p>Cuota</p>
-    
-                  <h1>S/. 377.78</h1>
-    
-                  <p>Mensuales</p>
-    
-              </div>
-    
-            </div>
-    
-          </div>
-    
-    
-    
-          <div class="col-sm-6">
-    
-            <div class="card">
-    
-              <div class="card-body">
-    
-                  <div class="row">
-    
-                      <div class="col">
-    
-                        <p>Préstamo</p>
-    
-                      </div>
-    
-                      <div class="col">
-    
-                        <p>Intereses</p>
-    
-                      </div>
-    
-                      <div class="col">
-    
-                        <p>Total a Pagar</p>
-    
-                      </div>
-    
-                  </div>
-    
-                  <div class="row">
-    
-                      <div class="col">
-    
-                        10000
-    
-                      </div>
-    
-                      <div class="col">
-    
-                        <span>+</span>
-    
-                        3600
-    
-                      </div>
-    
-                      <div class="col">
-    
-                        <span>=</span>
-    
-                        13600
-    
-                      </div>
-    
-                  </div>
-    
-              </div>
-    
-            </div>
-    
-          </div>
-    
+  
+  ​
+  
+    <section>
+  
+     <h1>DATOS</h1>
+  
+     <form>
+  
+       <div class="form-group">
+  
+        <label for="exampleInputEmail1">Ingresa el numero de cuenta donde se depo"sitará tu préstamo</label>
+  
+        <input type="text" class="form-control" pattern="[0-9]{{ entidadNumber}}" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+  
+       </div>
+  
+       <div class="form-group">
+  
+        <label for="exampleInputPassword1">Banco</label>
+  
+         <select class="form-control" id="exampleFormControlSelect1" #valor (change)="valorEntidad(valor.value)">
+  
+          <option value="15">BANCO DE CRÉDITO DEL PERÚ BCP</option>
+  
+          <option value="18">BANCO CONTINENTAL (BBVA)</option>
+  
+          <option value="17">BANCO INTERBANCK</option>
+  
+          <option value="14">BANCO DE LA NACIÓN</option>
+  
+          <option value="20">BANCO SCOTIABANCK</option>
+  
+          <option value="15">BANCO PICHINCHA</option>
+  
+          <option value="18">MI BANCO</option>
+  
+         </select>
+  
+       </div>
+  
+       <div class="form-group form-check">
+  
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  
+        <label class="form-check-label" for="exampleCheck1">Acepto <a href="">Términos y condiciones</a></label>
+  
+       </div>
+  
+       <div class="form-group form-check">
+  
+         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  
+         <label class="form-check-label" for="exampleCheck1">Acepto <a href="">compartir los datos de ventas de Visanet con la entidad financiera.</a></label>
+  
         </div>
-    
-    
-    
-        <section>
-    
-          <h1>DATOS</h1>
-    
-          <form>
-    
-              <div class="form-group">
-    
-                <label for="exampleInputEmail1">Ingresa el numero de cuenta donde se depositará tu préstamo</label>
-    
-                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    
-               
-    
-              </div>
-    
-              <div class="form-group">
-    
-                <label for="exampleInputPassword1">Banco</label>
-    
-                <input type="text" class="form-control" id="exampleInputPassword1">
-    
-              </div>
-    
-              <div class="form-group form-check">
-    
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    
-                <label class="form-check-label" for="exampleCheck1">Acepto <a href="">Términos y condiciones</a></label>
-    
-              </div>
-    
-              <div class="form-group form-check">
-    
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    
-                  <label class="form-check-label" for="exampleCheck1">Acepto <a href="">compartir los datos de ventas de Visanet con la entidad financiera.</a></label>
-    
-                </div>
-    
-              <button type="submit" class="btn btn-primary">RECIBIR MI PRÉSTAMO</button>
-    
-            </form>
-    
-  </section>
-        
-</section>
+  
+       <button type="submit" class="btn btn-primary">RECIBIR MI PRÉSTAMO</button>
+  
+      </form>
+  
+    </section>
+   </section>

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FirestoreService } from './services/firestore.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VistaUnoComponent } from './components/vista-uno/vista-uno.component';
@@ -40,9 +45,11 @@ import { ContenedorPrestamosComponent } from './components/vista-dos/contenedor-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [FirestoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
