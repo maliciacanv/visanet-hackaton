@@ -1,79 +1,220 @@
+<h3 class="color-magenta">Calcula tu préstamo</h3>
+
+
+<div class="d-flex align-items-center box-sizing">
+
+​
+
+ <div class="d-flex flex-column bd-highlight mb-3 column">
+
+  <div class="p-2 bd-highlight "><span class="negrita">¿Cuánto necesitas?</span></div>
+
+  <div class="p-2 bd-highlight">
+
+     <button class="button-min-max" (click)="menosCantidad()">-</button>
+
+     <span class="grid-container-color-text">S/.{{ cantidadInicializada }}</span>
+
+     <button class="button-min-max" (click)="masCantidad()">+</button>
+
+  </div>
+
+  <p class="text-min">Prestamo basado en TCA: 12%</p>
+
+  <div class="max-width">
+
+   <p class="tam-p negrita">IMPORTANTE</p>
+
+   <p class="tam-h2">El préstamo será otorgado por la entidad financiera elegida. Juntas y VisaNet no es responsable de la gestión del crédito</p>
+
+  </div>
+
+ </div>
+
+ <div class="d-flex flex-column bd-highlight mb-3 column">
+
+  <div class="p-2 bd-highlight"><span class="negrita">¿Cuánto tiempo?</span></div>
+
+  <div class="p-2 bd-highlight ">
+
+   <select name="meses" #valor (change)="numeroMeses(valor.value)" class="grid-container-color-select">
+
+    <option value="12">12 meses</option>
+
+    <option value="36">36 meses</option>
+
+    <option value="48">4 años</option>
+
+    <option value="60">5 años</option>
+
+   </select>
+
+  </div>
+
+ </div>
+
+ <div class="d-flex flex-column bd-highlight mb-3 column">
+
+  <div class="p-2 bd-highlight"><span class="negrita">Debo pagar</span></div>
+
+  <div class="p-2 bd-highlight">
+
+   <p class="negrita font-size-lg">S/.{{cuota}}</p>
+
+   <p class="negrita font-size-lg">Mensuales</p>
+
+  </div>
+
+ </div>
+
+ <div class="d-flex flex-column bd-highlight mb-3 column">
+
+  <div class="p-2 bd-highlight"><span class=" negrita ">Resumen de Pago</span></div>
+
+  <div class="p-2 bd-highlight">
+
+   <div class="grid-container negrita-sub">
+
+    <div>Prestamo</div>
+
+    <div>Intereses</div>
+
+    <div>Total a Pagar</div>
+
+    <div>{{cantidadInicializada}}<span class="color-yellow"> +</span></div>
+
+    
+
+    <div>{{interes}} </div>
+
+    
+
+    <div><span class="color-yellow"> =</span> {{montoTotalAPagar}}</div>
+
+  </div>
+
+​
+
+  <div class="espacio-top-text">
+
+    <a href="" class="espacio-top">Ver cronograma</a>
+
+    <button class="btn-magenta " (click)="solicitaroClick('dos')">SOLICITAR</button>
+
+   </div>
+
+   
+
+  </div>
+
+ </div>
+
+</div>
+
+​
+
+<div class="d-flex justify-content-center espacio-top-text espacio-bottom-text negrita"><h4>¿Qué necesito para pedir mi préstamo?</h4></div>
+
+​
+
+<div class="row d-flex justify-content-center ">
+
+  <div class="col-sm-6 max-width-container ">
+
+   <div class="card border border-warning " style="height: 12rem;">
+
+    <div class="card-body">
+
+     <h5 class="card-title color-yellow negrita">REQUISITOS</h5>
+
+     <ul class="card-text">
+
+       <li>Ser mayor de 18</li>
+
+       <li>Recibo de Agua o Luz</li>
+
+       <li>DNI de la solicitante</li>
+
+      </ul>
+
+    </div>
+
+   </div>
+
+  </div>
+
+​
+
+  <div class="col-sm-6 max-width-container ">
+
+   <div class="card border border-warning " style="height: 12rem;">
+
+    <div class="card-body">
+
+     <h5 class="card-title color-yellow negrita">BENEFICIOS</h5>
+
+     <ul>
+
+       <li>Facilidades en canales de cobro</li>
+
+       <li>Rápido sin tano papeleo</li>
+
+       <li>Tus ventas con VISA son el sustento crediticio</li>
+
+      </ul>
+
+    
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+​
+
+ <div class="d-flex justify-content-center espacio-top-text espacio-bottom-text negrita"><h4>¿Cómo me entregará mi dinero?</h4></div>
+
+​
+
+​
+
+​
+
 <section>
-  <h1>Calcula tu préstamo</h1>
-  <table>
-     <tr>
-       <th>¿Cuánto necesitas?</th>
-       <th>¿Cuánto tiempo?</th>
-       <th>Debo pagar</th>
-       <th>Resumen de Pago</th>
-     </tr>
-     <tr>
-       <td>
-         <button (click)="menosCantidad()">-</button>
-         <span>S/.{{cantidadInicializada }}</span>
-         <button (click)="masCantidad()">+</button>
-       </td>
-       <td>
-           <select name="meses" #valor (change)="numeroMeses(valor.value)">
-             <option value="12">12 meses</option>
-             <option value="36">36 meses</option>
-             <option value="48">4 años</option>
-             <option value="60">5 años</option>
-           </select>
-         </td>
-         <td>S/.{{cuota}}</td>
-         <td>
-             <div>
-                 <div>Préstamo</div>
-                 <div>Intereses</div>
-                 <div>Total a Pagar</div>
-                 <div>{{cantidadInicializada}}</div>
-                 <div>{{interes}}</div>
-                 <div>{{montoTotalAPagar}}</div>
-             </div>
-         </td>
-    </tr>
-   </table>  <div>
-     <a href="">Ver cronograma</a>
-     <button type="button" (click)="solicitarClick()">SOLICITAR</button>
-   </div>
+
+   <div class="container d-flex justify-content-center ">
+
+     <div class="row">
+
+      <div class="col max-width-container ">
+
+        <div>1</div>
+
+        <img src="" alt="telefono">
+
+        <h5 class="color-yellow negrita">NOS CONTACTAREMOS</h5>
+
+        <p>Nos pondremos en contacto contigo dentro de las 24 hrs.</p>
+
+      </div>
+
+      <div class="col max-width-container">
+
+        <div>2</div>
+
+        <img src="" alt="telefono">
+
+        <h5 class="color-yellow negrita">TE ENTREGAMOS TU DINERO</h5>
+
+        <p>Recibiras tu desembolso en 48 hrs.</p>
+
+      </div>
+
+      </div>
+
+     </div>
+
   </section>
-  <section>
-   <h1>¿Qué necesito para pedir mi préstamo?</h1>
-   <div class="contenedor-requisitos-beneficios">
-       <div>
-         <h1>REQUISITOS</h1>
-         <ol>
-           <li>Ser mayor de 18</li>
-           <li>Recibo de Agua o Luz</li>
-           <li>DNI de la solicitante</li>
-         </ol>
-       </div>
-       <div>
-           <h1>BENEFICIOS</h1>
-           <ol>
-             <li>Facilidades en canales de cobro</li>
-             <li>Rápido sin tano papeleo</li>
-             <li>Tus ventas con VISA son el sustento crediticio</li>
-           </ol>
-         </div>
-   </div>
-  </section><section>
-     <h1>¿Cómo me entregará mi dinero?</h1>
-     <div class="container">
-         <div class="row">
-           <div class="col">
-               <div>1</div>
-               <img src="" alt="telefono">
-               <h1>NOS CONTACTAREMOS</h1>
-               <p>Nos pondremos en contacto contigo dentro de las 24 hrs.</p>
-           </div>
-           <div class="col">
-               <div>2</div>
-               <img src="" alt="telefono">
-               <h1>TE ENTREGAMOS TU DINERO</h1>
-               <p>Recibiras tu desembolso en 48 hrs.</p>
-           </div>
-           </div>
-         </div>
-   </section>
