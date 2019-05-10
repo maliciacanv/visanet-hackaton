@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
@@ -23,6 +24,8 @@ import { AtencionClienteComponent } from './components/vista-dos/atencion-client
 import { OtrosServiciosComponent } from './components/otros-servicios/otros-servicios.component';
 import { ContenedorServiciosComponent } from './components/vista-dos/contenedor-servicios/contenedor-servicios.component';
 import { ContenedorPrestamosComponent } from './components/vista-dos/contenedor-prestamos/contenedor-prestamos.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { CardsfilterPipe } from './pipes/cardsfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,13 +44,16 @@ import { ContenedorPrestamosComponent } from './components/vista-dos/contenedor-
     AtencionClienteComponent,
     OtrosServiciosComponent,
     ContenedorServiciosComponent,
-    ContenedorPrestamosComponent
+    ContenedorPrestamosComponent,
+    FilterPipe,
+    CardsfilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [FirestoreService],
   bootstrap: [AppComponent]

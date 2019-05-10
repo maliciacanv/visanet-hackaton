@@ -16,13 +16,13 @@ export class CompararPrestamosComponent implements OnInit {
   montoTotal: number;
   tcaData:number;
 
-
+  filterBank = '';
 
   constructor(public entidadesService: FirestoreService) { 
     this.entidadesService.getEntidades().subscribe(bancos => {
       this.entidades = bancos;
     })
-   }
+  }
 
   sumarCantidad(){
     const cantInit = this.cantidadInicial;

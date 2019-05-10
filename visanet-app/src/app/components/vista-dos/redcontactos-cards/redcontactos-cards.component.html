@@ -3,9 +3,9 @@
   <div>
     <h1>Colaboradores</h1>
     <div>
-      <label for="search-rn">escriba en el buscador el rubro del comercio, para mejores resultados</label>
+      <label for="filterCards">escriba en el buscador el rubro del comercio, para mejores resultados</label>
       <div>
-        <input type="text" name="search-rn" placeholder="RUBRO DE NEGOCIO">
+        <input type="text" placeholder="RUBRO DE NEGOCIO" name="filterCards" [(ngModel)] = "filterCards">
       </div>
     </div>
     
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div class="card mb-3" style="max-width: 540px;" *ngFor = "let cards of colaboradoresCards">
+  <div class="card mb-3" style="max-width: 540px;" *ngFor = "let cards of colaboradoresCards | cardsfilter: filterCards">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="{{cards.img}}" class="card-img" alt="">

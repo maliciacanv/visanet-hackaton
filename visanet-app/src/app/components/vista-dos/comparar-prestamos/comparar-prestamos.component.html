@@ -48,7 +48,7 @@
  
         <div class="col">
  
-         <input type="text" placeholder="ENTIDAD" #datoabuscar (keyup)="busqueda(datoabuscar.value)">
+         <input type="text" placeholder="ENTIDAD" name="filterBank" [(ngModel)] = "filterBank">
  
         </div>
  
@@ -90,7 +90,7 @@
  
  <section>​
  
-  <div class="card" *ngFor = "let banco of entidades">
+  <div class="card" *ngFor = "let banco of entidades | filter: filterBank">
  
     <div class="card-body">
  
