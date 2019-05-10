@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pasos-nav.component.sass']
 })
 export class PasosNavComponent implements OnInit {
+  constructor() {}
+  
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

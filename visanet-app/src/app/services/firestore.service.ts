@@ -28,6 +28,7 @@ export interface Colaboradores{
   experience?: string;
   nearness?: string;
   img?: string;
+  rubro?: string;
 }
 
 export interface Entidades{
