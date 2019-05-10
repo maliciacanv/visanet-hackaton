@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../../../services/firestore.service';
+import { ServiciolocalService } from '../../../services/localservice/serviciolocal.service';
 @Component({
   selector: 'app-comparar-prestamos',
   templateUrl: './comparar-prestamos.component.html',
@@ -18,7 +19,7 @@ export class CompararPrestamosComponent implements OnInit {
 
   filterBank = '';
 
-  constructor(public entidadesService: FirestoreService) { 
+  constructor(public entidadesService: FirestoreService, public servicioLocal: ServiciolocalService) { 
     this.entidadesService.getEntidades().subscribe(bancos => {
       this.entidades = bancos;
     })
@@ -59,6 +60,14 @@ export class CompararPrestamosComponent implements OnInit {
     console.log(search)
     return this.entidades.push(search)
   }  
+
+  enviarDataStep4(banco:any, cantidad: any){
+    const obj = {
+      ...banco,
+      cantidadIni: cantidad
+    }
+    this.servicioLocal.datarecibidaStep4(obj);
+  }
 
   ngOnInit() {}
 
