@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calcula-prestamo',
@@ -13,7 +14,7 @@ export class CalculaPrestamoComponent implements OnInit {
   montoTotalAPagar: number;
   interes: number;
 
-  constructor() { }
+  constructor( private router: Router) {  }
 
   masCantidad(){
     const cantInit = this.cantidadInicializada;
@@ -37,7 +38,7 @@ export class CalculaPrestamoComponent implements OnInit {
   }
 
   solicitarClick(){
-    
+    this.router.navigate(['/prestamos/ingresardatos'])
   }
   ngOnInit() {
   }

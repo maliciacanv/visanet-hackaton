@@ -1,46 +1,47 @@
 <article class="container">
   <h1>HOLA EMPRENDEDORA</h1>
   <p>Te otorgamos un prestamo para que puedas seguir creciendo</p>
-  <ul  class="d-flex justify-content-center stepper horizontal" #casos let i = "index" [ngSwitch] = "i">
+  <ul  class="d-flex justify-content-center stepper horizontal">
+      <!-- #casos let i = "index" [ngSwitch] = "i" -->
 
     <li class="step active">
       <div type="div" class="btn btn-default btn-circle btn-xl step-title waves-effect waves-dark activado">1</div>
       <p>Calcula tu préstamo</p>
-      <div class="step-new-content" *ngSwitchDefault>
+      <!-- <div class="step-new-content" *ngSwitchDefault>
         <app-calcula-prestamo></app-calcula-prestamo>
-      </div>
+      </div> -->
     </li>
 
     <li class="step">
       <div type="div" class="btn btn-default btn-circle btn-xl step-title waves-effect waves-dark" [ngClass]="{'activado' : i === 1, 'desactivado' : i !== 1}">2</div>
       <p>Ingresa tus datos</p>
-      <div class="step-new-content" *ngSwitchCase = "1">
+      <!-- <div class="step-new-content" *ngSwitchCase = "1">
         <app-ingresar-datos></app-ingresar-datos>
-      </div>
+      </div> -->
     </li>
 
     <li class="step">
       <div type="div" class="btn btn-default btn-circle btn-xl step-title waves-effect waves-dark" [ngClass]="{'activado' : i === 2, 'desactivado' : i !== 2}">3</div>
       <p>Compara préstamos</p>
-      <div class="step-new-content" *ngSwitchCase = "2">
+      <!-- <div class="step-new-content" *ngSwitchCase = "2">
         <app-comparar-prestamos></app-comparar-prestamos>
-      </div>
+      </div> -->
     </li>
 
     <li class="step">
       <div type="div" class="btn btn-default btn-circle btn-xl step-title waves-effect waves-dark" [ngClass]="{'activado' : i === 3, 'desactivado' : i !== 3}">4</div>
       <p>Solicita tu préstamo</p>
-      <div class="step-new-content" *ngSwitchCase = "3">
+      <!-- <div class="step-new-content" *ngSwitchCase = "3">
         <app-solicitar-prestamos></app-solicitar-prestamos>
-      </div>
+      </div> -->
     </li>
 
     <li class="step" >
       <div type="div" class="btn btn-default btn-circle btn-xl step-title waves-effect waves-dark" [ngClass]="{'activado' : i === 4, 'desactivado' : i !== 4}">5</div>
       <p>Recibe tu préstamo</p>
-      <div class="step-new-content" *ngSwitchCase = "4">
+      <!-- <div class="step-new-content" *ngSwitchCase = "4">
         <app-recibir-prestamos></app-recibir-prestamos>
-      </div>
+      </div> -->
     </li>
   </ul>
 </article>

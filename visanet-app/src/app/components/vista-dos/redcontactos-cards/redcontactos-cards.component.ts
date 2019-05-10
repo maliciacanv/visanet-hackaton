@@ -16,7 +16,32 @@ export class RedcontactosCardsComponent implements OnInit {
     this.colaboradoresService.getColaboradores().subscribe(cards => {
       this.colaboradoresCards = cards;
     })
+    
    }
+
+    // this.colaboradoresService.getColaboradores().subscribe(cards => {
+    //   this.colaboradoresCards = cards.filter((e:any) => e.profession === 'Arquitecto')
+    // })
+
+    // this.colaboradoresService.getColaboradores().subscribe(cards => {
+    //   this.colaboradoresCards = cards.filter((e:any) => e.profession === 'Contador')
+    // })
+
+    // this.colaboradoresService.getColaboradores().subscribe(cards => {
+    //   this.colaboradoresCards = cards.filter((e:any) => e.profession === 'Chef')
+    // })
+
+    // this.colaboradoresService.getColaboradores().subscribe(cards => {
+    //   this.colaboradoresCards = cards.filter((e:any) => e.experience === '1 año de Experiencia');
+    // })
+
+    // this.colaboradoresService.getColaboradores().subscribe(cards => {
+    //   this.colaboradoresCards = cards.filter((e:any) => e.experience === '2 años de Experiencia');
+    // })
+
+    // this.colaboradoresService.getColaboradores().subscribe(cards => {
+    //   this.colaboradoresCards = cards.filter((e:any) => e.experience === '3 años de Experiencia');
+    // })
 
   ngOnInit() {
   }
