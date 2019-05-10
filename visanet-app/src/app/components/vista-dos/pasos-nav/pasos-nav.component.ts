@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pasos-nav.component.sass']
 })
 export class PasosNavComponent implements OnInit {
+  // colorStepProgress: object = { outOfPlace: false }
+  
   constructor() {}
   
-
   ngOnInit() {}
 
 }

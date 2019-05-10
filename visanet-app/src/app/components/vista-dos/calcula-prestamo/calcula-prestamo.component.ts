@@ -35,6 +35,10 @@ export class CalculaPrestamoComponent implements OnInit {
     this.montoTotalAPagar = this.cantidadInicializada + this.interes;
     this.cuota = this.montoTotalAPagar/this.valor;
   }
+
+  solicitarClick(){
+    
+  }
   ngOnInit() {
   }
 
